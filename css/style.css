@@ -1,0 +1,349 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'PT Sans Narrow' , sans-serif;
+    color: black;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* header */
+header {
+    height: 70px;
+    /* border: 1px solid; */
+}
+header h1 {
+    /* border: 1px solid; */
+    /* display: inline-block; */
+    float: left;
+    padding: 15px 24px;
+    text-transform: capitalize;
+}
+header h1 a {
+    transition: 0.3s;
+}
+header h1 a:hover {
+    color: rgb(25, 0, 255);
+}
+header ul {
+    /* border: 1px solid; */
+    float: right;
+}
+header ul li {
+    /* border: 1px solid; */
+    padding: 24px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 17px;
+}
+header ul li:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid  rgb(25, 0, 255) ; 
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+}
+header ul li a {
+    transition: 0.6s;
+}
+header ul li a:hover {
+    color:rgb(25, 0, 255);
+}
+a {
+    text-decoration: none;
+}
+
+
+/* container */
+.container { 
+    width: 90%;
+    margin: 0 auto; 
+    /* border: 1px solid; */
+}
+.container::after { /*untuk menghapus float*/
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* mobile menu */
+.mobile-menu {
+    float: right;
+    display: none;
+    padding: 18px;
+    /* border: 1px solid; */
+}
+.mobile-menu:hover {
+    cursor: pointer;
+}
+#check {
+    display: none;
+}
+
+
+/* sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -250px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.3s;
+    opacity: 70%;
+}
+.sidebar ul li a{
+    color: white;
+}
+.sidebar ul li {
+    padding: 24px;
+    transition: 0.3s;
+    transition-property: background-color;
+}
+.sidebar ul li:hover {
+    background-color: rgb(148, 148, 148);
+}
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+/* banner */
+.banner {
+    background-color: rgb(22, 22, 22);
+    padding: 120px 0;
+}
+section {
+    padding: 50px 0;
+}
+.banner img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px white;
+    margin-bottom: 15px;
+}
+.banner h2, p, span {
+    color: white;
+    margin-bottom: 10px;
+}
+.banner p {
+    font-size: 15px;
+}
+.banner-left {
+    /* border: 1px solid; */
+    padding-left: 24px;
+}
+
+
+/* About */
+section h3 {
+    /* border: 1px solid; */
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+section h3::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid  rgb(63, 54, 146) ; 
+    width: 2%;
+    margin: auto;
+    padding-bottom: 8px;
+    margin-bottom: -8px;
+}
+#about p {
+    color: black;
+    font-family: sans-serif;
+    text-align: justify;
+    line-height: 25px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* Experience */
+.col-1 {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    float: left;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.col-1 img {
+    width: 50%;
+    filter: grayscale(100%);
+    transition: 2s;
+    margin-bottom: 30px;
+    border: 1px solid;
+}
+.col-1 p {
+    color: rgb(32, 32, 32);
+    font-size: 20px;
+}
+.col-1 a:hover img {
+    filter: grayscale(0);
+    transform: scale(1.1) ;
+}
+
+/* Skills */
+#skills {
+    background-color: rgb(238, 235, 235);
+}
+#skills h4 {
+    color: rgb(88, 88, 88);
+}
+#skills .bar {
+    background-color: white;
+    border: 1px solid;
+    height: 30px;
+    margin-top: 5px 0 20px 0; /* atas kanan bawah kiri*/
+    margin-bottom: 20px;
+}
+.bar .nilai {
+    height: 30px;
+    background-color: rgb(22, 7, 90);
+    display: inline-block;
+    text-align: center;
+    color: white;
+    opacity: 95%;
+}
+.html {
+    width: 80%;
+}
+.css {
+    width: 70%;
+}
+.php {
+    width: 70%;
+}
+.js {
+    width: 60%;
+}
+.mysql {
+    width: 80%;
+}
+.java {
+    width: 80%;
+}
+.mc {  
+    width: 90%;
+}
+
+
+/* Portfolio */
+.col-4 {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 15px;
+    float: left;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.col-4 img {
+    width: 100%;
+    height: 270px;
+    filter: grayscale(100%);
+    transition: 2s;
+    margin-bottom: 20px;
+}
+.col-4 span {
+    color: rgb(32, 32, 32);
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.col-4 a:hover img {
+    filter: grayscale(0);
+    transform: scale(1.1) ;
+}
+
+/* Contact */
+#contact {
+    background-color: rgb(238, 235, 235);
+}
+.contactForm {
+    padding: 75px 50px;
+    background: rgb(255, 255, 255);
+    box-shadow: 10px 15px 50px rgba(25, 0, 255, 0.1);
+    max-width: 500px;
+    margin-top: 50px;
+    margin: auto;
+}
+.contactForm .socmed {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contactForm .socmed img {
+    width: 30px;
+}
+.socmed p {
+    color: rgb(54, 53, 53);
+}
+
+/* Footer */
+footer {
+    background-color: rgb(59, 59, 59);
+    padding: 25px;
+    text-align: center;
+}
+footer small {
+    color: white;
+}
+
+@media (max-width: 768px){
+    .mobile-menu {
+        display: block;
+    }
+    header ul {
+        display: none;
+    }
+    .col-4 {
+        width: 50%;
+    }
+    .col-4 img {
+        height: 170px;
+    }
+}
+
+@media (max-width: 480px) {
+    .col-4 img {
+        height: 35px;
+        width: 100px;
+    }
+    .banner img {
+        width: 100px;
+    }
+    .banner h2 {
+        font-size: 20px;
+    }
+    #about p {
+        font-size: 12px;
+    }
+    #skills .bar {
+        height: 20px;
+    }
+    .bar .nilai {
+        height: 20px;
+    }
+    .col-4 span {
+        font-size: 10px;
+    }
+    .contactForm {
+        width: 50%;
+        height: 120px;
+    }
+    .socmed p {
+        font-size: 12px;
+    }
+    .contactForm .socmed img {
+        width: 20px;
+    }
+
+}
